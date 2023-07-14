@@ -46,12 +46,12 @@ const LoginForm = () => {
         <h2>Lost in translation</h2> 
         <h5>Get started</h5>
          <form onSubmit={ handleSubmit(onSubmit) }>
-            <fieldset>
+            <fieldset id="fieldsetStyling">
                 <label htmlFor="username">Username: </label>
                 <input 
                 type="text"
                 placeholder ="What's your name?"
-                 { ...register("username: ", usernameConfig)} 
+                 { ...register("username: ", usernameConfig)}
                  />
                 <span className="material-symbols-outlined">
                     arrow_circle_right

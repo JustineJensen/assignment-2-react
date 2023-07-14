@@ -27,7 +27,8 @@ export const createUser = async (username) => {
                 username,
                 translations: []
             })
-        })
+        }) 
+        console.log(response)
         if (!response.ok) {
             throw new Error ('Could not create a user with username ' + username)
         }

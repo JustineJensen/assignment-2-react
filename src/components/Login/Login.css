@@ -3,6 +3,12 @@ body{
 }
 
 .material-symbols-outlined {
-  color: blueviolet;
- 
+  background-color:darkorchid;
+  position: absolute;
+  /* transform: translateY(-50%); */
+  border-radius: 25px;
+}
+
+.fieldsetStyling {
+  
 }
