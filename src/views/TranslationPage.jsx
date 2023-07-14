@@ -1,7 +1,10 @@
 const TranslationPage = () => { 
-    return(
+    
+    
+    
+return(
 
-<h1>Translation page</h1>
+<input type="text" placeholder="Hello" />
     )
 }
 export default TranslationPage

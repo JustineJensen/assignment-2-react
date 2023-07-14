@@ -1,7 +1,10 @@
 import {useForm} from 'react-hook-form'
+import {loginUser}from '../../api/user'
+import { useState } from 'react'
+import './Login.css'
 
 // Conditions for creating login
-const usernameConfig ={
+const usernameConfig = {
     required: true,
     minLength: 3
 }
@@ -13,15 +16,18 @@ const LoginForm = () => {
         handleSubmit,
         formState: { errors }
     } = useForm()
+    const [ loading, setLoading ] = useState(false)
 
-    const onSubmit = (data) =>{
-        //TranslationPage
-        
-        console.log(data)
+    const onSubmit = async({ username }) => {
+        setLoading(true)
+        const [error, user] = await loginUser(username)
+        console.log('Error: ', error);
+        console.log('User: ', user);
+        setLoading(false)
     }
 
     
-    // Error message 
+    // Error message to check is the user exist
     const errorMessage = (() => {
         if (!errors.username) {
             return null
@@ -45,14 +51,16 @@ const LoginForm = () => {
                 <input 
                 type="text"
                 placeholder ="What's your name?"
-                 { ...register("username",usernameConfig)} 
+                 { ...register("username: ", usernameConfig)} 
                  />
+                <span className="material-symbols-outlined">
+                    arrow_circle_right
+                </span>
                  { errorMessage }
             </fieldset>
 
-            <button type="submit">Continue</button>
-            
-            
+            <button type="submit" disabled = { loading }>Continue</button>
+            { loading && <p> Logging in...</p> }
          </form>
         </>
     )
