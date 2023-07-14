@@ -1,7 +1,7 @@
 const TranslationPage = () => { 
     return(
 
-<h1>TranslationPage</h1>
+<h1>Translation page</h1>
     )
 }
 export default TranslationPage
