@@ -3,12 +3,9 @@ body{
 }
 
 .material-symbols-outlined {
-  background-color:darkorchid;
+  color:darkorchid;
   position: absolute;
   /* transform: translateY(-50%); */
   border-radius: 25px;
-}
-
-.fieldsetStyling {
   
 }

@@ -1,10 +1,10 @@
+//import { useNavigate } from 'react-router-dom'
 import { createHeaders } from './index'
 
 
 const apiUrl = process.env.REACT_APP_API_URL
 
-
-export const checkForUser = async (username) => {
+const checkForUser = async (username) => {
     try {
         const response = await fetch(`${apiUrl}?username=${username}`)
         if (!response.ok) {
@@ -14,11 +14,11 @@ export const checkForUser = async (username) => {
         return [ null, data ]
     }
     catch (error) {
-        return [ error.message, [] ]
+        return [ error.message, [] ]  
     }
 }
 
-export const createUser = async (username) => {
+const createUser = async (username) => {
     try {
         const response = await fetch(apiUrl, {
             method: 'POST',
@@ -38,12 +38,12 @@ export const createUser = async (username) => {
     catch (error) {
         return [ error.message, [] ]
     }
-}
-
+}        
 
 export const loginUser = async (username) => {
     // check is user exists
     const [ checkError, user ] = await checkForUser(username)
+    
     if(checkError !== null) {
         return [ checkError, null ]
     }
@@ -53,7 +53,5 @@ export const loginUser = async (username) => {
     }
 
     return await createUser(username)
-
-
     
 }
