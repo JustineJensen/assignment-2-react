@@ -7,13 +7,14 @@ import {
 import UserProfile from './views/ProfilePage';
 import Login from './views/Login';
 import TranslationPage from './views/TranslationPage';
-
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
 
   return (
     <BrowserRouter>
     <div className="App">
+      <Navbar />
       <Routes>
         <Route path="/" element={ <Login/> } /> 
         <Route path="/translation" element={ <TranslationPage /> } />
