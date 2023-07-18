@@ -9,7 +9,6 @@ import Login from './views/Login';
 import TranslationPage from './views/TranslationPage';
 
 
-
 function App() {
 
   return (

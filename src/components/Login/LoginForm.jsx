@@ -7,6 +7,7 @@ import { storageRead } from '../../Utils/Storage'
 import { useNavigate } from 'react-router-dom'
 //import UserProvider from '../../context/UserContext'
 import { useUser } from '../../context/UserContext'
+import { STORAGE_KEY_USER } from '../../const/storageKeys'
 
 // Conditions for creating login
 const usernameConfig = {
@@ -31,7 +32,6 @@ const LoginForm = () => {
         }
         console.log('User has changed!', user)
     }, [ user, navigate ])
-    
 
     // EVENT HANDLERS
     const onSubmit = async({ username }) => {
@@ -41,7 +41,7 @@ const LoginForm = () => {
             setApiError(error)
         }
         if (userResponse !== null) {
-            storageSave('translation-user', userResponse)
+            storageSave(STORAGE_KEY_USER, userResponse)
             setUser(userResponse)
         }
         setLoading(false)
