@@ -55,3 +55,17 @@ export const loginUser = async (username) => {
     return await createUser(username)
     
 }
+// returning the single user object  with the latest translation from the database
+export const userById =async(userId)=>{
+    try {
+        const response = await fetch(`${apiUrl}/${userId}`)
+    
+        if(!response.ok){
+            throw new Error('Could not fetch user')
+            return [null, userId]
+        }
+    } catch (error) {
+       return[error.message,null] 
+    }
+
+}

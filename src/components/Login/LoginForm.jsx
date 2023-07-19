@@ -28,7 +28,7 @@ const LoginForm = () => {
     // SIDE EFFECTS
     useEffect(() =>  {
         if (user !== null) {
-            navigate('profile')
+            navigate('translation')
         }
         console.log('User has changed!', user)
     }, [ user, navigate ])

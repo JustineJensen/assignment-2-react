@@ -1,5 +1,7 @@
 const TranslationButton = ({ name, image }) => {
 
+    
+    
     return (
         <>
         <button>
@@ -14,7 +16,9 @@ const TranslationButton = ({ name, image }) => {
         </button>
         </>
     )
-    
+
 }
+    
+
 
 export default TranslationButton

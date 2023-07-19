@@ -4,8 +4,4 @@ const ProfileTranslationHistoryList = ({ translation }) => {
      )
 }
 
-
-    
-
-
 export default ProfileTranslationHistoryList;

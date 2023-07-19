@@ -1,19 +1,22 @@
 import withAuth from "../hoc/withAuth"
-import TranslationButton from "../components/Translations/TranslationButton"
 import TranslationForm from "../components/Translations/TranslationForm"
+import  './Translations.css'
+
 
 const TranslationPage = () => { 
-<input type="text" placeholder="Hello" />
-
+    
 
 return (
     <>
     <h2>Translations</h2>
-    <section id="translation-notes">
-    <TranslationForm />
+    <section id="translation-input">
+    <TranslationForm /> 
     </section>
+    <div id = "display-translations">
+        <img src="img/h.png" alt="" width ="55" />
+    </div>
 
-    <section id="translation-options"> 
+    {/* <section id="translation-options"> 
         <TranslationButton name = "a" image="img/a.png" key="a"/>
         <TranslationButton name = "b" image="img/b.png" key="b"/>
         <TranslationButton name = "c" image="img/c.png" key="c"/>
@@ -41,9 +44,9 @@ return (
         <TranslationButton name = "y" image="img/y.png" key="y"/>
         <TranslationButton name = "z" image="img/z.png" key ="z"/>
         
-    </section>
+    </section> */}
 
     </>
-   )
+)
 }
 export default withAuth(TranslationPage)
