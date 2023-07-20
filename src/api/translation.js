@@ -4,10 +4,10 @@ export const apiUrl = process.env.REACT_APP_API_URL;
 // add translations
 export const addTranslation = async (user, translation) => {
   console.log("User", user);
-  console.log(user.translations);
+  console.log(user.translations); //added code
   console.log("translation:", translation);
   const response = await fetch(`${apiUrl}/${user.id}`, {
-    method: "PATCH",
+    method: "PATCH", // the translations
     headers: createHeaders(),
     body: JSON.stringify({
       // username: user.username,
@@ -35,7 +35,7 @@ export const deleteTranslations = async (userId) => {
     if (!response.ok) {
       throw new Error("Could not clear translations");
     }
-    const result = await response.json;
+    const result = await response.json();
     return [null, result];
   } catch (error) {
     return [error.message, null];

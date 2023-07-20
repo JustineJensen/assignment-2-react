@@ -21,7 +21,7 @@ const ProfileActions = () => {
     }
     
     // clearing the translation history
-    const handleDeleteClick =async() =>{
+    const handleDeleteClick = async() =>{
         if(!window.confirm('You are about to delete the translation history!\n This can not be undone')){
             return
         }

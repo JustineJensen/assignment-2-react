@@ -8,14 +8,13 @@ import { useEffect } from "react"
 import { storageSave } from "../Utils/Storage"
 import { STORAGE_KEY_USER } from "../const/storageKeys"
 
-
 // Profile
 
 const ProfilePage = () => {
     const { user ,setUser} = useUser()
     useEffect(()=>{
         const findUser =async()=>{
-            const[error,latestUser] = await getUser(user.username)
+            const[error,latestUser] = await getUser(user.username) //username
             if(error === null){
                 storageSave(STORAGE_KEY_USER,latestUser)
                 setUser(latestUser)

@@ -6,7 +6,7 @@ import { useState } from "react";
 // TranslationList should be a state to re-render each time a new translation is made
 const ProfileTranslationHistory = () => {
   const { user } = useUser();
-  const [translations, setTranslations] = useState([]);
+  const [translations, setTranslations] = useState(user.translations||[]);
   useEffect(() => {
     fetch(`${apiUrl}?username=${user.username}`)
       .then((response) => response.json())
