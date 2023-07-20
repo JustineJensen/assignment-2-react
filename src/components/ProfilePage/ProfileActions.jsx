@@ -5,6 +5,8 @@ import { StorageDelete } from "../../Utils/Storage"
 import deleteTranslations from "../../api/translation"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { storageSave } from "../../Utils/Storage"
+import ProfileTranslationHistory from "./ProfileTranslationHistory"
+
 
 const ProfileActions = () => {
 
@@ -35,6 +37,7 @@ const ProfileActions = () => {
         }
         storageSave(STORAGE_KEY_USER,updatedUser)
         setUser(updatedUser)
+        //ProfileTranslationHistory()
     }
     return (
         <ul>

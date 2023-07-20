@@ -9,3 +9,19 @@ body{
   border-radius: 25px;
   
 }
+
+#inputField {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  width: 50%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#inputField:focus {
+  border-color: #6c63ff; /* Customize the color to match your design */
+  outline: none; /* Remove default blue outline on some browsers */
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.5); /* Optional: Add a subtle box-shadow */
+}

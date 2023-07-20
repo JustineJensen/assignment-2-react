@@ -5,8 +5,6 @@ import TranslationButton from "../components/Translations/TranslationButton"
 
 
 const TranslationPage = () => { 
-    
-
 return (
     <>
     <h2>Translations</h2>

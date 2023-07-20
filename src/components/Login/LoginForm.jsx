@@ -64,12 +64,12 @@ const LoginForm = () => {
 
     return (
         <>
-        <h2>Lost in translation</h2> 
+        <h2 id="test">Lost in translation</h2> 
         <h5>Get started</h5>
         <form onSubmit={ handleSubmit(onSubmit) }>
             <fieldset id="fieldsetStyling">
-                <label htmlFor="username">Username: </label>
-                <input type="text" placeholder ="What's your name?"
+                <label  htmlFor="username">Username: </label>
+                <input id="inputField" type="text" placeholder ="What's your name?"
                 { ...register("username", usernameConfig)}
 
                 />

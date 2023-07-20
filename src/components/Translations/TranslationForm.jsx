@@ -7,7 +7,7 @@ import { useState } from "react";
 const TranslationForm = () => {
   const { register, handleSubmit } = useForm();
   const { user } = useUser();
-  const [translate, setTranslate] = useState();
+  const [displayImages, setDisplayImages] = useState([]);
 
   const onSubmit = (data) => {
     addTranslation(user, data.translationInput);
@@ -17,11 +17,17 @@ const TranslationForm = () => {
     for (let i = 0; i < inputText.length; i++) {
       translatedImages.push({
         key: i,
-        images: `/signs/${inputText[i]}.png`,
+        src: `/img/${inputText[i]}.png`,
         altText: inputText[i],
       });
     }
+    setDisplayImages(translatedImages)
   };
+
+  const translationList = displayImages.map((img, index) => (
+    <img key={img.key} src={img.src} alt={img.altText}></img>
+  ));
+
 
   return (
     <>
@@ -40,7 +46,7 @@ const TranslationForm = () => {
           Translate
         </button>
       </form>
-      <div id="outputField"></div>
+      <div id="outputField"> {translationList}</div>
     </>
   );
 };
