@@ -2,6 +2,7 @@
 import { createHeaders } from './index'
 
 
+
 const apiUrl = process.env.REACT_APP_API_URL
 
 const checkForUser = async (username) => {
@@ -56,14 +57,14 @@ export const loginUser = async (username) => {
     
 }
 // returning the single user object  with the latest translation from the database
-export const userById =async(userId)=>{
+export const getUser =async(username)=>{
     try {
-        const response = await fetch(`${apiUrl}/${userId}`)
-    
+        const response = await fetch(`${apiUrl}?username=${username}`)
+        const data = await response.json()
         if(!response.ok){
             throw new Error('Could not fetch user')
-            return [null, userId]
         }
+        return [ null, data ]
     } catch (error) {
        return[error.message,null] 
     }

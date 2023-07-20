@@ -1,7 +1,7 @@
+import TranslationPage from "../../views/TranslationPage"
+
 const TranslationButton = ({ name, image }) => {
 
-    
-    
     return (
         <>
         <button>
@@ -19,6 +19,4 @@ const TranslationButton = ({ name, image }) => {
 
 }
     
-
-
 export default TranslationButton
