@@ -27,8 +27,7 @@ const ProfileTranslationHistory = () => {
     <section>
       <h4>Last 10 Translations </h4>
       {translationList.length === 0 && <p>You have no translations yet.</p>}
-
-      <ul>{translationList}</ul>
+      <p>{translationList}</p>
     </section>
   );
 };

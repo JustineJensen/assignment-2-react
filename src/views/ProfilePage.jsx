@@ -28,8 +28,9 @@ findUser()
         <>
             <h1>Profile page </h1>
             <ProfileHeader username={ user.username }/> 
-            <ProfileActions />
             <ProfileTranslationHistory />
+            <ProfileActions />
+            
         </> 
     )
 }
