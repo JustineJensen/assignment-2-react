@@ -66,7 +66,7 @@ export const getUser =async(username)=>{
         }
         return [ null, data ]
     } catch (error) {
-       return[error.message,null] 
+        return[error.message,null] 
     }
 
 }

@@ -1,4 +1,5 @@
 import { createHeaders } from "./index";
+import {userId} from "./"
 
 export const apiUrl = process.env.REACT_APP_API_URL;
 // add translations
@@ -26,7 +27,7 @@ export const addTranslation = async (user, translation) => {
 export const deleteTranslations = async (userId) => {
   try {
     const response = await fetch(`${apiUrl}/${userId}`, {
-      method: "PATCH",
+      method: 'PATCH',
       headers: createHeaders(), // headers will include the api key we have
       body: JSON.stringify({
         translations: [],
@@ -36,6 +37,7 @@ export const deleteTranslations = async (userId) => {
       throw new Error("Could not clear translations");
     }
     const result = await response.json();
+    // return null if there is no error and return results if there is error
     return [null, result];
   } catch (error) {
     return [error.message, null];
