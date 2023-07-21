@@ -2,7 +2,8 @@
 Sign Language Translator is a single application built using the React framework. 
 
 ## How to run the application
-###install the following packages
+
+### install the following packages
 `install npm -g npm' 
 
 `install react-hook-dom'
