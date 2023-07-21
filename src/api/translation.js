@@ -20,14 +20,10 @@ export const addTranslation = async (user, translation) => {
     throw new Error("Could not update translation");
   }
   const result = await response.json();
-  console.log(result);
-
   const updatedUser = {
     ...user,
     translations: limitedTranslations,
   };
-
- // setUser(updatedUser);  
 };
 
 

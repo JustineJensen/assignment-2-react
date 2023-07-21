@@ -7,11 +7,14 @@ const Navbar = () => {
     const {user} = useUser()
     return (
         <nav id="navDesign">
-            <h3>Lost in translation</h3>
-            <img id ="logoImg" src="img/Logo.png" alt="logo" width="40"/>
+            <div id="leftNav">
+                <img id ="logoImg" src="img/Logo.png" alt="logo" width="40"/>
+                <h4>Lost in translation</h4>
+            </div>
+            
 
             {user !== null &&
-            <div> 
+            <div id="rightDiv"> 
                 <h4><NavLink id="navLink" to="/translation">Translations </NavLink></h4>
                 <h4><NavLink id="navLink" to="/profile">Profile </NavLink></h4>
                 {/* <button><NavLink to="/profile">Button <i className='fas fa-user-circle'></i></NavLink></button> */}

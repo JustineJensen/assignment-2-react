@@ -5,10 +5,8 @@ import "./Login.css";
 import { storageSave } from "../../Utils/Storage";
 import { storageRead } from "../../Utils/Storage";
 import { useNavigate } from "react-router-dom";
-//import UserProvider from '../../context/UserContext'
 import { useUser } from "../../context/UserContext";
 import { STORAGE_KEY_USER } from "../../const/storageKeys";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Conditions for creating login
 const usernameConfig = {
@@ -35,7 +33,6 @@ const LoginForm = () => {
     if (user !== null) {
       navigate("translation");
     }
-    console.log("User has changed!", user);
   }, [user, navigate]);
 
   // EVENT HANDLERS
@@ -68,17 +65,11 @@ const LoginForm = () => {
   })();
 
   return (
-    <div class="container">
+    <div className="container">
       <h2>Lost in translation</h2>
       <aside>
-        <img
-          id="img-logo"
-          src="img/Logo-Hello.png"
-          alt="logo-hello"
-          width="200"
-        />
+        <img id="img-logo" src="img/Logo-Hello.png" alt="logo-hello" />
       </aside>
-      {/* <h3>Get started</h3> */}
       <form id="inputSection" onSubmit={handleSubmit(onSubmit)}>
         <fieldset id="fieldsetStyling">
           <input
@@ -88,11 +79,7 @@ const LoginForm = () => {
             {...register("username", usernameConfig)}
           />
           {errorMessage}
-          {/* <span className="material-symbols-outlined">
-                    arrow_circle_right
-                </span> */}
         </fieldset>
-        {/* <FontAwesomeIcon icon="fa-solid fa-arrow-right" /> */}
         <button id="continueBtn" type="submit" disabled={loading}>
           Continue
         </button>

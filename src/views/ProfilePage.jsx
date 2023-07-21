@@ -7,14 +7,15 @@ import { getUser } from "../api/user";
 import { useEffect } from "react";
 import { storageSave } from "../Utils/Storage";
 import { STORAGE_KEY_USER } from "../const/storageKeys";
+import "./Translations.css";
 
-// Profile
+
 
 const ProfilePage = () => {
   const { user, setUser } = useUser();
   return (
     <>
-      <h1>Profile page </h1>
+      <h2 id="profileHeader">Profile page </h2>
       <ProfileHeader username={user.username} />
       <ProfileActions />
       <ProfileTranslationHistory />

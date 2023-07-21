@@ -33,7 +33,6 @@ const TranslationForm = () => {
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset>
-          {/* <label htmlFor="translation-input"> Translation: </label> */}
           <input
             id="inputFieldTranslation"
             type="text"
@@ -42,7 +41,6 @@ const TranslationForm = () => {
           />
         </fieldset>
 
-        {/* Event handler -> send translation to API & display the translation */}
         <button id="translate-btn" type="submit">
           Translate
         </button>

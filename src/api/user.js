@@ -1,7 +1,4 @@
-//import { useNavigate } from 'react-router-dom'
 import { createHeaders } from './index'
-
-
 
 const apiUrl = process.env.REACT_APP_API_URL
 
@@ -44,19 +41,16 @@ const createUser = async (username) => {
 export const loginUser = async (username) => {
     // check is user exists
     const [ checkError, user ] = await checkForUser(username)
-    
     if(checkError !== null) {
         return [ checkError, null ]
     }
-
     if (user.length > 0) {
         return [ null, user.pop() ]
     }
-
-    return await createUser(username)
-    
+    return await createUser(username)  
 }
-// returning the single user object  with the latest translation from the database
+
+// returning the single user object  with the latest translation from the api
 export const getUser =async(username)=>{
     try {
         const response = await fetch(`${apiUrl}?username=${username}`)

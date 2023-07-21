@@ -38,7 +38,7 @@
 }
 
 nav {
-  background-color:#E7B355;
+  background-color: #e7b355;
   display: flex;
   justify-content: space-between;
   color: #f0f0f0;
@@ -46,31 +46,32 @@ nav {
 }
 
 nav > h3 {
-  margin-left:30px;
+  margin-left: 30px;
   font-family: LoveYa;
-
 }
 
 nav > div {
-  margin-right:30px;
+  margin-right: 30px;
   display: flex;
   justify-content: space-around;
-  margin-left:30px;
+  margin-left: 30px;
 }
 
 nav > div > h4 {
   padding: 0 20px;
-  margin-left:30px;
+  margin-left: 30px;
   font-family: LoveYa;
 }
 
 #navLink {
-  color:#f0f0f0;
+  color: #f0f0f0;
   text-decoration: none;
 }
-#logoImg{
-  position: absolute;
-  left:1px
+#logoImg {
+  /* position: absolute; */
+  /* left:1px; */
+  padding: 20px;
 }
-
-
+#navDesign {
+  padding: 0px;
+}

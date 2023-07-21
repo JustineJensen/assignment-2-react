@@ -1,22 +1,19 @@
-import TranslationPage from "../../views/TranslationPage"
+import TranslationPage from "../../views/TranslationPage";
 
 const TranslationButton = ({ name, image }) => {
+  return (
+    <>
+      <button>
+        <aside>
+          <img src={image} alt={name} width="55"></img>
+        </aside>
 
-    return (
-        <>
-        <button>
-            <aside> 
-                <img src={ image } alt={ name } width="55"></img>
-            </aside>
+        <section>
+          <b> {name}</b>
+        </section>
+      </button>
+    </>
+  );
+};
 
-            <section>
-                <b> { name }</b>
-            </section>
-
-        </button>
-        </>
-    )
-
-}
-    
-export default TranslationButton
+export default TranslationButton;

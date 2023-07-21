@@ -1,6 +1,12 @@
-#output-field{
-    background-color: white;
-    border-radius: 25px;
-    line-height: 7em;
-    
+#output-field {
+  background-color: white;
+  border-radius: 25px;
+  line-height: 7em;
+}
+
+#profileHeader {
+  background-color: #e7b355;
+  color: whitesmoke;
+  margin: 0;
+  padding-top: 80px;
 }
