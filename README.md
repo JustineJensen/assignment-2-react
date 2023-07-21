@@ -2,7 +2,7 @@
 Sign Language Translator built using the React framework. 
 
 ## How to run the application
-'install npm -g npm' 
+````install npm -g npm' 
 then run 'npm start' to start the application
 
 ## The Startup Page
