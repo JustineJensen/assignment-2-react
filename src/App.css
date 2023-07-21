@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+nav {
+  background-color:rgb(226, 184, 77);
+  display: flex;
+  justify-content: space-between;
+  color: #f0f0f0;
+}
+
+nav > h3 {
+  margin-left:30px;
+}
+
+nav > div {
+  margin-right:30px;
+  display: flex;
+  justify-content: space-around;
+  margin-left:30px;
+}
+
+nav > div > h4 {
+  padding: 0 10px;
+  margin-left:30px;
+}
+
+#navLink {
+  color:#f0f0f0;
+  text-decoration: none;
+}
+

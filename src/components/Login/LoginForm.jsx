@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 //import UserProvider from '../../context/UserContext'
 import { useUser } from '../../context/UserContext'
 import { STORAGE_KEY_USER } from '../../const/storageKeys'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Conditions for creating login
 const usernameConfig = {
@@ -64,21 +65,22 @@ const LoginForm = () => {
 
     return (
         <>
-        <h2 id="test">Lost in translation</h2> 
-        <h5>Get started</h5>
+        <h2>Lost in translation</h2> 
+        <h3>Get started</h3>
         <form onSubmit={ handleSubmit(onSubmit) }>
             <fieldset id="fieldsetStyling">
-                <label  htmlFor="username">Username: </label>
-                <input id="inputField" type="text" placeholder ="What's your name?"
+                
+                <input id="inputField" type="text" placeholder="What's your name?"
                 { ...register("username", usernameConfig)}
 
                 />
                 { errorMessage }
-                <span className="material-symbols-outlined">
+                {/* <span className="material-symbols-outlined">
                     arrow_circle_right
-                </span>
+                </span> */}
             </fieldset>
-            <button type="submit" disabled = { loading }>Continue</button>
+            {/* <FontAwesomeIcon icon="fa-solid fa-arrow-right" /> */}
+            <button id="continueBtn" type="submit" disabled = { loading }>Continue</button>
             { loading && <p> Logging in...</p> }
             { apiError && <p> { apiError }  </p> }
         </form>

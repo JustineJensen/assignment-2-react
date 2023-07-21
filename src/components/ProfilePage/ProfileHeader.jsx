@@ -1,3 +1,4 @@
+// import ProfilePage from "../../views/ProfilePage"
 import ProfilePage from "../../views/ProfilePage"
 
 const ProfileHeader = ( {username}) => {

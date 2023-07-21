@@ -6,6 +6,7 @@ import deleteTranslations from "../../api/translation"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { storageSave } from "../../Utils/Storage"
 import ProfileTranslationHistory from "./ProfileTranslationHistory"
+import './ProfilePage.css'
 
 
 const ProfileActions = () => {
@@ -45,11 +46,11 @@ const ProfileActions = () => {
         //ProfileTranslationHistory()
     }
     return (
-        <ul>
-            <li><Link to="/translation">Translations </Link> </li>
-            <li> <button onClick ={handleDeleteClick}>Delete</button></li>
-            <li> <button onClick={ handleLogoutClick}>Logout</button></li>
-        </ul>
+        <>
+            {/* <Link to="/translation">Translations </Link> */}
+             <button id="profileButtons" onClick ={handleDeleteClick}>Delete</button>
+             <button id="profileButtons" onClick={ handleLogoutClick}>Logout</button>
+        </>
     )
 }
 

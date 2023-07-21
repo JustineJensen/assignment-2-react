@@ -1,5 +1,7 @@
 body{
-    background-color:darkgoldenrod;
+    /* background-color:darkgoldenrod; */
+    font-family: fantasy;
+    color:rgb(92, 88, 88);
 }
 
 .material-symbols-outlined {
@@ -7,21 +9,41 @@ body{
   position: absolute;
   /* transform: translateY(-50%); */
   border-radius: 25px;
-  
 }
 
 #inputField {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 16px;
-  width: 50%;
+  border: 10px solid #9571b3;
+  border-radius: 70px;
+  padding: 30px;
+  font-size: 20px;
+  width: 60%;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
+  background-color: lightgray;
+  /* background-image: linear-gradient(lightgrey, grey); */
+  
 }
 
 #inputField:focus {
-  border-color: #6c63ff; /* Customize the color to match your design */
+  border-color: #9571b3; /* Customize the color to match your design */
   outline: none; /* Remove default blue outline on some browsers */
   box-shadow: 0 0 5px rgba(108, 99, 255, 0.5); /* Optional: Add a subtle box-shadow */
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  text-align: center;
+}
+
+#continueBtn {
+  border: 5px solid #9571b3;
+  /* background-image: linear-gradient(lightgrey, #9571b3); */
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: lightgray;
 }
