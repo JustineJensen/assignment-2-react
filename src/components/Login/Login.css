@@ -1,3 +1,13 @@
+@font-face {
+  font-family: LoveYa;
+  src: url(LoveYaLikeASister-Regular.ttf);
+}
+h2{
+  font-family: LoveYa;
+  color:white;
+}
+
+
 body{
     /* background-color:darkgoldenrod; */
     font-family: fantasy;
@@ -32,6 +42,7 @@ body{
 
 ::-webkit-input-placeholder {
   text-align: center;
+  
 }
 
 :-moz-placeholder {
@@ -46,4 +57,21 @@ body{
   font-size: 16px;
   box-sizing: border-box;
   background-color: lightgray;
+}
+#img-logo{
+  /* position: absolute;
+  left: 20px;
+  top: 80px;
+  right: 50px; */
+  position: absolute; /* Set the image to absolute positioning */
+  top: 50px; /* Adjust the top offset as needed */
+  left: 50px; /* Adjust the left offset as needed */
+  z-index: 1; 
+}
+#inputSection{
+  margin-top: 100px;
+}
+
+aside {
+  position: relative;
 }

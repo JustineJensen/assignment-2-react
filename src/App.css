@@ -38,14 +38,17 @@
 }
 
 nav {
-  background-color:rgb(226, 184, 77);
+  background-color:#E7B355;
   display: flex;
   justify-content: space-between;
   color: #f0f0f0;
+  border: 2px solid lightgray;
 }
 
 nav > h3 {
   margin-left:30px;
+  font-family: LoveYa;
+
 }
 
 nav > div {
@@ -56,12 +59,18 @@ nav > div {
 }
 
 nav > div > h4 {
-  padding: 0 10px;
+  padding: 0 20px;
   margin-left:30px;
+  font-family: LoveYa;
 }
 
 #navLink {
   color:#f0f0f0;
   text-decoration: none;
 }
+#logoImg{
+  position: absolute;
+  left:1px
+}
+
 

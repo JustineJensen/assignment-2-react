@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useUser } from "../../context/UserContext";
 import { addTranslation } from "../../api/translation";
 import { useState } from "react";
-import './Translations.css'
+import "./Translations.css";
 
 const TranslationForm = () => {
   const { register, handleSubmit } = useForm();
@@ -22,20 +22,20 @@ const TranslationForm = () => {
         altText: inputText[i],
       });
     }
-    setDisplayImages(translatedImages)
+    setDisplayImages(translatedImages);
   };
 
   const translationList = displayImages.map((img, index) => (
     <img key={img.key} src={img.src} alt={img.altText}></img>
   ));
 
-
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset>
           {/* <label htmlFor="translation-input"> Translation: </label> */}
-          <input id="inputFieldTranslation"
+          <input
+            id="inputFieldTranslation"
             type="text"
             {...register("translationInput")}
             placeholder="What do you want to translate?"
@@ -47,7 +47,7 @@ const TranslationForm = () => {
           Translate
         </button>
       </form>
-      <div id="outputField">  {translationList}</div>
+      <div id="outputField"> {translationList}</div>
     </>
   );
 };

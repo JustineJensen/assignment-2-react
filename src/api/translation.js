@@ -1,13 +1,11 @@
 import { createHeaders } from "./index";
 import {userId} from "./"
-import { useUser } from "../context/UserContext";
-
-
 
 export const apiUrl = process.env.REACT_APP_API_URL;
 // add translations
 export const addTranslation = async (user, translation) => {
-  const updatedTranslations = [...user.translations, translation];
+  const updatedTranslations = user.translations
+  updatedTranslations.push(translation)
   const limitedTranslations = updatedTranslations.slice(-10); // Limit to the last 10 translations
 
   const response = await fetch(`${apiUrl}/${user.id}`, {
@@ -21,10 +19,15 @@ export const addTranslation = async (user, translation) => {
   if (!response.ok) {
     throw new Error("Could not update translation");
   }
-
-
   const result = await response.json();
   console.log(result);
+
+  const updatedUser = {
+    ...user,
+    translations: limitedTranslations,
+  };
+
+ // setUser(updatedUser);  
 };
 
 
@@ -40,6 +43,7 @@ export const deleteTranslations = async (userId) => {
     if (!response.ok) {
       throw new Error("Could not clear translations");
     }
+    
     const result = await response.json();
     // return null if there is no error and return results if there is error
     return [null, result];

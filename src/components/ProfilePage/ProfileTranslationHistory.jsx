@@ -17,7 +17,7 @@ const ProfileTranslationHistory = () => {
     } ) 
     .catch(error=>{
         console.log("Couldn't fetch user name")
-     })
+    })
      // useEffect runs once   
   }, [])
 
@@ -28,6 +28,7 @@ const ProfileTranslationHistory = () => {
     <section>
       <h4>Last 10 Translations </h4>
       {translationList.length === 0 && <p>You have no translations.</p>}
+      
       <ul>
         {translationList}</ul>
     </section>

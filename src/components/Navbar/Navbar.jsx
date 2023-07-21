@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { useUser } from "../../context/UserContext"
 import TranslationPage from "../../views/TranslationPage"
-import ProfilePage from "../../views/ProfilePage"
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Navbar = () => {
@@ -9,6 +8,7 @@ const Navbar = () => {
     return (
         <nav id="navDesign">
             <h3>Lost in translation</h3>
+            <img id ="logoImg" src="img/Logo.png" alt="logo" width="40"/>
 
             {user !== null &&
             <div> 

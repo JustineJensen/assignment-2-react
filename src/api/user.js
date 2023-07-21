@@ -25,7 +25,7 @@ const createUser = async (username) => {
             method: 'POST',
             headers: createHeaders(),
             body: JSON.stringify({
-                username,
+                username,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
                 translations: []
             })
         }) 

@@ -3,7 +3,6 @@ import TranslationForm from "../components/Translations/TranslationForm"
 import  './Translations.css'
 import TranslationButton from "../components/Translations/TranslationButton"
 
-
 const TranslationPage = () => { 
 return (
     <>
