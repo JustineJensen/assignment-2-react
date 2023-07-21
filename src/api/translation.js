@@ -1,28 +1,32 @@
 import { createHeaders } from "./index";
 import {userId} from "./"
+import { useUser } from "../context/UserContext";
+
+
 
 export const apiUrl = process.env.REACT_APP_API_URL;
 // add translations
 export const addTranslation = async (user, translation) => {
-  console.log("User", user);
-  console.log(user.translations); //added code
-  console.log("translation:", translation);
+  const updatedTranslations = [...user.translations, translation];
+  const limitedTranslations = updatedTranslations.slice(-10); // Limit to the last 10 translations
+
   const response = await fetch(`${apiUrl}/${user.id}`, {
-    method: "PATCH", // the translations
+    method: "PATCH",
     headers: createHeaders(),
     body: JSON.stringify({
-      // username: user.username,
-      translations: [...user.translations, translation], //Istället för [...user.translations, translation] ha userTranslations (från parameter) 4.
+      translations: limitedTranslations,
     }),
   });
 
   if (!response.ok) {
     throw new Error("Could not update translation");
   }
+
+
   const result = await response.json();
-  console.log(result)
-  // return [ null, result ]
+  console.log(result);
 };
+
 
 export const deleteTranslations = async (userId) => {
   try {

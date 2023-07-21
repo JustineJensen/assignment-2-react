@@ -12,18 +12,6 @@ import { STORAGE_KEY_USER } from "../const/storageKeys";
 
 const ProfilePage = () => {
   const { user, setUser } = useUser();
-  // useEffect(() => {
-  //   const findUser = async () => {
-  //     const [error, latestUser] = await getUser(user.username);
-  //     if (error === null) {
-  //       storageSave(STORAGE_KEY_USER, latestUser);
-  //       setUser(latestUser);
-  //       console.log(`${user}`);
-  //     }
-  //   };
-  //   findUser();
-  // }, []);
-
   return (
     <>
       <h1>Profile page </h1>
